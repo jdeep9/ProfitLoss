@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/import-form','ProfitLossController@importForm');
+Route::post('/import','ProfitLossController@import')->name('profitLoss.import');
+Route::get('/profit-loss','ProfitLossController@profitLossScript');
